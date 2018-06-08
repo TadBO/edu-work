@@ -2,9 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="lib/weui/weui.min.css">
+    <link rel="stylesheet" href="lib/weui/jquery-weui.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="lib/zepto/zepto.min.js"></script>
 </head>
-<body>
+<body ontouchstart>
+<div class="weui-tab">
+    <div class="weui-tab__bd">
+        <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+            <h1>页面一</h1>
+        </div>
+        <div id="tab2" class="weui-tab__bd-item">
+            <h1>页面二</h1>
+        </div>
+        <div id="tab3" class="weui-tab__bd-item">
+            <h1>页面三</h1>
+        </div>
+        <div id="tab4" class="weui-tab__bd-item ">
+            <h1>页面四</h1>
+        </div>
+    </div>
 
+    <div class="weui-tabbar">
+        <a href="#tab1" class="weui-tabbar__item weui-bar__item--on">
+            <div class="weui-tabbar__icon">
+                <img src="./images/home.png" alt="">
+            </div>
+            <p class="weui-tabbar__label">我的会员</p>
+        </a>
+        <a href="#tab2" class="weui-tabbar__item">
+            <div class="weui-tabbar__icon">
+                <img src="./images/cart.png" alt="">
+            </div>
+            <p class="weui-tabbar__label">运动仓管理</p>
+        </a>
+        <a href="#tab3" class="weui-tabbar__item">
+            <div class="weui-tabbar__icon">
+                <img src="./images/appointment.png" alt="">
+            </div>
+            <p class="weui-tabbar__label">会员预约</p>
+        </a>
+        <a href="#tab4" class="weui-tabbar__item">
+            <div class="weui-tabbar__icon">
+                <img src="./images/center.png" alt="">
+            </div>
+            <p class="weui-tabbar__label">个人中心</p>
+        </a>
+    </div>
+</div>
 </body>
 </html>
+<script src="lib/weui/js/jquery-weui.min.js"></script>

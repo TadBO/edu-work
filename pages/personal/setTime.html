@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>设置在岗时间</title>
+    <link rel="stylesheet" href="../../lib/weui/weui.min.css">
+    <link rel="stylesheet" href="../../lib/weui/jquery-weui.min.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../iconfont/iconfont.css">
+    <script src="../../lib/zepto/zepto.min.js"></script>
+    <link rel="stylesheet" href="../../css/personal/setTime.css">
+</head>
+<body>
+<!--标题-->
+<div id="header" data-position="fixed" data-tap-toggle="false">
+    <div class="header">
+        <a class="back iconfont icon-zuojiantou" href="../../index.html"></a>
+        <div class="h1 title">设置在岗时间</div>
+        <div class="zimu"></div>
+    </div>
+</div>
+<div class="content">
+    <div class="content-time">
+        <p>可设置7天内的在岗时间</p>
+        <ul class="time-list">
+            <script>
+                var date = new Date(),
+                    day = date.getDate(),
+                    dayArry = [];
+                for (var i = 0; i < 7; i++) {
+                    if (i == 0) {
+                        dayArry.push('今天');
+                        continue;
+                    }
+                    if (i == 1) {
+                        dayArry.push('明天');
+                        continue;
+                    }
+                    var maxDate = new Date(date.setDate(day + i));
+                    dayArry.push(maxDate.getDate());
+                }
+                var html = '';
+                dayArry.forEach(function (value, index) {
+                    html += '<li class="times">' +
+                        value +
+                        '</li>'
+                });
+                $('.time-list').html(html);
+            </script>
+        </ul>
+    </div>
+
+    <div class="time-main">
+        <div class="main-option">
+            <p>已设置在岗时间段</p>
+            <p>在岗时间总计：12小时</p>
+        </div>
+        <ul class="main-time">
+            <li class="main-list pick">
+                0:00 - 1:00
+            </li>
+            <li class="main-list">
+                1:00 - 2:00
+            </li>
+            <li class="main-list">
+                2:00 - 3:00
+            </li>
+            <li class="main-list">
+                3:00 - 4:00
+            </li>
+            <li class="main-list">
+                4:00 - 5:00
+            </li>
+            <li class="main-list">
+                5:00 - 6:00
+            </li>
+            <li class="main-list">
+                6:00 - 7:00
+            </li>
+            <li class="main-list">
+                7:00 - 8:00
+            </li>
+            <li class="main-list">
+                8:00 - 9:00
+            </li>
+            <li class="main-list pick">
+                9:00 - 10:00
+            </li>
+            <li class="main-list">
+                10:00 - 11:00
+            </li>
+            <li class="main-list">
+                11:00 - 12:00
+            </li>
+            <li class="main-list">
+                12:00 - 13:00
+            </li>
+            <li class="main-list">
+                13:00 - 14:00
+            </li>
+            <li class="main-list">
+                14:00 - 15:00
+            </li>
+            <li class="main-list">
+                15:00 - 16:00
+            </li>
+            <li class="main-list">
+                16:00 - 17:00
+            </li>
+            <li class="main-list">
+                17:00 - 18:00
+            </li>
+            <li class="main-list">
+                18:00 - 19:00
+            </li>
+            <li class="main-list">
+                19:00 - 20:00
+            </li>
+            <li class="main-list checked">
+                20:00 - 21:00
+            </li>
+            <li class="main-list">
+                21:00 - 22:00
+            </li>
+            <li class="main-list">
+                22:00 - 23:00
+            </li>
+            <li class="main-list">
+                23:00 - 24:00
+            </li>
+        </ul>
+
+        <div class="btn">
+            <a href="javascript:;" class="weui-btn weui-btn_plain-primary weui-btn_plain-disabled">保存</a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>个人资料</title>
+    <link rel="stylesheet" href="../../lib/weui/weui.min.css">
+    <link rel="stylesheet" href="../../lib/weui/jquery-weui.min.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../iconfont/iconfont.css">
+    <script src="../../lib/zepto/zepto.min.js"></script>
+    <link rel="stylesheet" href="../../css/personal/profile.css">
+</head>
+<body>
+<!--标题-->
+<div id="header" data-position="fixed" data-tap-toggle="false">
+    <div class="header">
+        <a class="back iconfont icon-zuojiantou" href="../../index.html"></a>
+        <div class="h1 title">个人资料</div>
+        <div class="zimu"></div>
+    </div>
+</div>
+
+    <div class="content">
+        <form>
+            <div class="weui-cells__title">基本资料</div>
+            <div class="weui-cells">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>姓名</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                        <input class="weui-input" type="text" placeholder="请输入姓名">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>年龄</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                        <input class="weui-input" type="number" placeholder="请输入年龄">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>出生年月</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                        <input class="weui-input" type="text" placeholder="请输入姓名">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>籍贯</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                        <input class="weui-input" type="text" placeholder="请输入姓名">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>民族</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                        <input class="weui-input" type="text" placeholder="请输入民族">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>身份证号码</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                        <input class="weui-input" type="text" placeholder="请输入身份证号码">
+                    </div>
+                </div>
+            </div>
+            <div class="weui-cells__title">运动资料</div>
+            <div class="weui-cells">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>身高cm</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                        <input class="weui-input" type="number" placeholder="请输入身高">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>体重kg</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                        <input class="weui-input" type="number" placeholder="请输入体重">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>专业认证</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                        <input class="weui-input" type="text" placeholder="请输入专业认证">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>特长技能</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                        <input class="weui-input" type="text" placeholder="请输入特长技能">
+                    </div>
+                </div>
+            </div>
+            <div class="weui-cells__title">联系方式</div>
+            <div class="weui-cells">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>手机号码</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                        <input class="weui-input" type="number" placeholder="请输入手机号码">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>现住地址</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                        <input class="weui-input" type="text" placeholder="请输入现住地址">
+                    </div>
+                </div>
+            </div>
+            <div class="weui-cells__title">紧急联系人</div>
+            <div class="weui-cells">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>姓名</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                        <input class="weui-input" type="text" placeholder="请输入姓名">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>关系</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                        <input class="weui-input" type="text" placeholder="请输入与紧急联系人的关系">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>手机号</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                        <input class="weui-input" type="number" placeholder="请输入紧急联系人手机号">
+                    </div>
+                </div>
+            </div>
+
+            <div class="submit">
+                <a href="javascript:;" class="weui-btn weui-btn_primary">保存</a>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

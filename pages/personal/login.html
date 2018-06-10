@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../../iconfont/iconfont.css">
     <script src="../../lib/zepto/zepto.min.js"></script>
     <link rel="stylesheet" href="../../css/personal/login.css">
-
+    <script src="../../js/common.js"></script>
 </head>
 <body>
 <!--标题-->
@@ -27,24 +27,50 @@
         <p>FIFO私教管理平台</p>
     </div>
     <div class="form">
-        <form>
+        <form id="login">
            	<ul>
                	<li>
                    	<span>账号</span>
-                   	<input class="weui-input" type="text" placeholder="请输入账号">
+                   	<input name="username" class="weui-input" type="text" placeholder="请输入账号">
                	</li>
                	<li>
                    	<span>密码</span>
-                   	<input class="weui-input" type="password" placeholder="请输入原密码">
+                   	<input name="password" class="weui-input" type="password" placeholder="请输入原密码">
                	</li>
            	</ul>
 			
 			<div class="forget_password">
 				<a href="./forget-password.html" class="">忘记密码</a>
 			</div>
-            <a href="javascript:;" class="weui-btn weui-btn_primary">登录</a>
+            <a href="javascript:;" class="weui-btn weui-btn_primary" id="submit">登录</a>
             <a href="./register.html" class="weui-btn weui-btn_primary">注册新账号</a>
         </form>
+        <script>
+
+            $('#submit').on('click', function () {
+                //用于提交后台的数据
+                var data = getFormData('login');
+                console.log(data);
+                if(!data.username) {
+                    alert('请输入账号');
+                    return false;
+                }
+                if(!data.password) {
+                    alert('请输入密码');
+                    return false;
+                }
+                $.ajax({
+                    url: '', //提交的地址
+                    data: data,
+                    type: 'POST',
+                    success: function (res) {
+                        //登录成功的回调
+                        location.href = '../../index.html';
+                    }
+                })
+
+            });
+        </script>
     </div>
 </div>
 </body>

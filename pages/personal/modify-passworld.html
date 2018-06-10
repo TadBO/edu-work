@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../../iconfont/iconfont.css">
     <script src="../../lib/zepto/zepto.min.js"></script>
     <link rel="stylesheet" href="../../css/personal/modify-passworld.css">
-
+    <script src="../../js/common.js"></script>
 </head>
 <body>
 <!--标题-->
@@ -27,28 +27,96 @@
         <p>更改密码</p>
     </div>
     <div class="form">
-        <form>
+        <form id="modify">
            <ul>
                <li>
-                   <span>账号</span>
-                   <input class="weui-input" type="text" placeholder="请输入账号">
+                   <div class="weui-cell weui-cell_vcode">
+                       <div class="weui-cell__hd">
+                           <label class="weui-label">账号</label>
+                       </div>
+                       <div class="weui-cell__bd">
+                           <input name="account" class="weui-input" type="text" placeholder="请输入账号">
+                       </div>
+                   </div>
                </li>
                <li>
-                   <span>原密码</span>
-                   <input class="weui-input" type="password" placeholder="请输入原密码">
+                   <div class="weui-cell weui-cell_vcode">
+                       <div class="weui-cell__hd">
+                           <label class="weui-label">原密码</label>
+                       </div>
+                       <div class="weui-cell__bd">
+                           <input name="oldpass" class="weui-input tel" type="password" placeholder="请输入原密码">
+                       </div>
+                   </div>
                </li>
                <li>
-                   <span>新密码</span>
-                   <input class="weui-input" type="password" placeholder="请输入新密码">
+                   <div class="weui-cell weui-cell_vcode">
+                       <div class="weui-cell__hd">
+                           <label class="weui-label">新密码</label>
+                       </div>
+                       <div class="weui-cell__bd">
+                           <input name="newpass" class="weui-input" type="password" placeholder="请输入新密码">
+                       </div>
+                   </div>
                </li>
                <li>
-                   <span>再次确认</span>
-                   <input class="weui-input" type="password" placeholder="请再次确认密码">
+                   <div class="weui-cell weui-cell_vcode">
+                       <div class="weui-cell__hd">
+                           <label class="weui-label">再次确认</label>
+                       </div>
+                       <div class="weui-cell__bd">
+                           <input name="conform" class="weui-input conform" type="password" placeholder="请再次确认密码">
+                       </div>
+                   </div>
                </li>
            </ul>
 
-            <a href="javascript:;" class="weui-btn weui-btn_primary">修改并重新登录</a>
+            <a href="javascript:;" class="weui-btn weui-btn_primary" id="submit">修改并重新登录</a>
         </form>
+        <script>
+            $('.conform').on('blur', function () {
+                var data = getFormData('modify');
+                if(!data.newpass) {
+                    alert('请先输入新密码');
+                    $(this).val('');
+                    return false;
+                }
+                if($(this).val() != data.newpass) {
+                    alert('两次密码输入不同');
+                }
+            });
+
+            $('#submit').on('click', function () {
+                //用于提交后台的数据
+                var data = getFormData('modify');
+                console.log(data);
+                if(!data.account) {
+                    alert('请输入帐号');
+                    return false;
+                }
+                if(!data.oldpass) {
+                    alert('请输入原密码');
+                    return false;
+                }
+                if(!data.newpass) {
+                    alert('请输入新密码');
+                    return false;
+                }
+                if(!data.conform) {
+                    alert('请再次确认密码');
+                    return false;
+                }
+                $.ajax({
+                    url: '', //提交的地址
+                    data: data,
+                    type: 'POST',
+                    success: function (res) {
+                        //登录成功的回调
+                        location.href = './login.html';
+                    }
+                });
+            });
+        </script>
     </div>
 </div>
 </body>

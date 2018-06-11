@@ -1,0 +1,12 @@
+.weui-label {
+    width: 130px;
+}
+
+.weui-cells:after {
+     transform: scaleY(1);
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 0 10px;
+}

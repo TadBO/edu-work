@@ -3,14 +3,14 @@
 }
 
 .tab-content .content-option {
-    display: flex;
-    flex-direction: row;
-    background: #fff;
-    text-align: center;
-    border: 1px solid #ddd;
-    border-left-color: transparent;
-    border-right-color: transparent;
-}
+     display: flex;
+     flex-direction: row;
+     background: #fff;
+     text-align: center;
+     border: 1px solid #ddd;
+     border-left-color: transparent;
+     border-right-color: transparent;
+ }
 
 .content-option .option-list {
     flex: 1;

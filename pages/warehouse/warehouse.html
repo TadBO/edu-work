@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>智能仓库</title>
+    <link rel="stylesheet" href="../../lib/weui/weui.min.css">
+    <link rel="stylesheet" href="../../lib/weui/jquery-weui.min.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../iconfont/iconfont.css">
+    <script src="../../lib/zepto/zepto.min.js"></script>
+    <link rel="stylesheet" href="../../css/personal/modify-passworld.css">
+    <link rel="stylesheet" href="../../css/warehouse/warehouse.css">
+</head>
+<body>
+<!--标题-->
+<div id="header" data-position="fixed" data-tap-toggle="false">
+    <div class="header">
+        <a class="back iconfont icon-zuojiantou" href="../../index.html"></a>
+        <div class="h1 title">运动仓库管理</div>
+        <div class="zimu"></div>
+    </div>
+</div>
+    <header class="tabHead">
+        <span class="active" data-num="1">运动仓信息</span>
+        <span class="" data-num="2">会员信息</span>
+        <b class="border" style="left: 0px;"></b>
+    </header>
+    <script>
+        $('.tabHead span').on('click', function () {
+            $(this).addClass('active').siblings('.tabHead span').removeClass('active');
+            $('.tabHead .border').css('left', $(this).offset().left + 'px');
+            var num = $(this).attr('data-num');
+            if(num == 1) {
+                $('.main-tab-1').show().siblings().hide();
+            } else {
+                $('.main-tab-2').show().siblings().hide();
+            }
+        });
+    </script>
+    <div class="main">
+        <div class="main-tab-1">
+            <div class="warehouse-info">
+                <div class="info-image">
+                    <img src="../../images/tx.png" alt="">
+                </div>
+                <div class="info-message">
+                    <p>张江高科技园区2F运动仓</p>
+                    <p>仓体编号: CT987898</p>
+                    <p>工作状态: 正常</p>
+                    <p>仓体教练: 3</p>
+                    <a href="coachMange.html" class="iconfont icon-jiaren"></a>
+                </div>
+            </div>
+            <div class="tab-month">
+                <div class="month">
+                    <p>5月</p>
+                </div>
+                <div class="data">
+                    <ul>
+                        <li>
+                            今日数据
+                        </li>
+                        <li>
+                            本周数据
+                        </li>
+                        <li>
+                            本月数据
+                        </li>
+                        <li>
+                            上月数据
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="month-content">
+                <div class="weui-cells">
+                    <a class="weui-cell weui-cell_access" href="javascript:;">
+                        <div class="weui-cell__bd">
+                            <p>本月营收数据：总额：<span style="color: red;">161.196（元）</span></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="single">
+                <div class="weui-cells__title">单次销售：5196.4元</div>
+            </div>
+            <ul class="data-table">
+                <li style="width: 26%;">
+                    <p>单次智能课（元）</p>
+                    <p>2356</p>
+                </li>
+                <li style="width: 24%;">
+                    <p>课程次数</p>
+                    <p>40</p>
+                </li>
+                <li style="width: 26%;">
+                    <p>单次私教课（元）</p>
+                    <p>2840</p>
+                </li>
+                <li style="width: 23%;">
+                    <p>课程次数</p>
+                    <p>36</p>
+                </li>
+            </ul>
+            <div class="single">
+                <div class="weui-cells__title">会员卡销售：156000元</div>
+            </div>
+            <ul class="data-table">
+                <li style="width: 26%;">
+                    <p>智能卡销售（元）</p>
+                    <p>68000</p>
+                </li>
+                <li style="width: 24%;">
+                    <p>智能卡次数</p>
+                    <p>100</p>
+                </li>
+                <li style="width: 26%;">
+                    <p>私教卡销售（元）</p>
+                    <p>88000</p>
+                </li>
+                <li style="width: 23%;">
+                    <p>私教卡次数</p>
+                    <p>100</p>
+                </li>
+            </ul>
+            <div class="month-content">
+                <div class="weui-cells">
+                    <a class="weui-cell weui-cell_access" href="javascript:;">
+                        <div class="weui-cell__bd">
+                            <p>本月销售数据：总额：<span style="color: red;">400（元）</span></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <ul class="data-table">
+                <li style="width: 26%;">
+                    <p>智能课消费总数</p>
+                    <p>300</p>
+                </li>
+                <li style="width: 24%;">
+                    <p>上课人数</p>
+                    <p>60</p>
+                </li>
+                <li style="width: 26%;">
+                    <p>人均次数</p>
+                    <p>5</p>
+                </li>
+                <li style="width: 23%;">
+                    <p>预约到达率</p>
+                    <p>36%</p>
+                </li>
+            </ul>
+            <ul class="data-table" style="border-top: none;">
+                <li style="width: 26%;">
+                    <p>私教课消费总数</p>
+                    <p>100</p>
+                </li>
+                <li style="width: 24%;">
+                    <p>上课人数</p>
+                    <p>20</p>
+                </li>
+                <li style="width: 26%;">
+                    <p>人均次数</p>
+                    <p>8</p>
+                </li>
+                <li style="width: 23%;">
+                    <p>预约到达率</p>
+                    <p>100%</p>
+                </li>
+            </ul>
+            <div class="single">
+                <div class="weui-cells__title">本月运动仓运营数据：</div>
+            </div>
+            <ul class="data-table" style="border-top: none;">
+                <li style="width: 24%;">
+                    <p>新增用户</p>
+                    <p>5</p>
+                </li>
+                <li style="width: 26%;">
+                    <p>线上获课用户数</p>
+                    <p>90</p>
+                </li>
+                <li style="width: 26%;">
+                    <p>线下扫码用户数</p>
+                    <p>30</p>
+                </li>
+                <li style="width: 23%;">
+                    <p>进仓成功率</p>
+                    <p>100%</p>
+                </li>
+            </ul>
+            <ul class="data-table" style="border-top: none;">
+                <li style="width: 24%;">
+                    <p>未评测用户数</p>
+                    <p>50</p>
+                </li>
+                <li style="width: 26%;">
+                    <p>已评测用户数</p>
+                    <p>80</p>
+                </li>
+                <li style="width: 26%;">
+                    <p>私教会员总数</p>
+                    <p>70</p>
+                </li>
+                <li style="width: 23%;">
+                    <p>智能会员总数</p>
+                    <p>300</p>
+                </li>
+            </ul>
+        </div>
+        <div class="main-tab-2" style="display: none">
+            <div class="content-option">
+                <div class="option-list">
+                    <span>上课时间</span>
+                    <i></i>
+                </div>
+                <div class="option-list">
+                    <span>智能卡余次</span>
+                    <i></i>
+                </div>
+                <div class="option-list">
+                    <span>私教卡余次</span>
+                    <i></i>
+                </div>
+                <div class="option-list">
+                    <span>教练</span>
+                    <i></i>
+                </div>
+            </div>
+            <div class="main-content">
+                <a  href="" class="main-list">
+                    <div class="list-image">
+                        <img src="../../images/person.png" alt="">
+                    </div>
+                    <div class="list-info">
+                        <p>会员昵称：Zzz</p>
+                        <p>最近上课时间：3小时前</p>
+                        <p>智能卡余次：1</p>
+                        <p>私教卡余次：2</p>
+                    </div>
+                    <div class="lsit-plan">
+                        <p>当前计划</p>
+                        <p>12/16</p>
+                    </div>
+                    <div class="list-coach">
+                        <P>专属教练</P>
+                        <P>lixiaolong</P>
+                    </div>
+                    <i class="iconfont icon-youjiantou"></i>
+                </a>
+                <a  href="" class="main-list">
+                    <div class="list-image">
+                        <img src="../../images/person.png" alt="">
+                    </div>
+                    <div class="list-info">
+                        <p>会员昵称：Zzz</p>
+                        <p>最近上课时间：3小时前</p>
+                        <p>智能卡余次：1</p>
+                        <p>私教卡余次：2</p>
+                    </div>
+                    <div class="lsit-plan">
+                        <p>当前计划</p>
+                        <p>12/16</p>
+                    </div>
+                    <div class="list-coach">
+                        <P>专属教练</P>
+                        <P>lixiaolong</P>
+                    </div>
+                    <i class="iconfont icon-youjiantou"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

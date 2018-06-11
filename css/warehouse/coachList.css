@@ -1,0 +1,46 @@
+.investor {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    position: relative;
+    color: #333;
+}
+
+.investor .investor-info {
+    text-align: center;
+    flex: 1;
+}
+
+.investor .inverstor-msg {
+    flex: 1.5;
+    font-size: 13px;
+    line-height: 30px;
+}
+
+.investor .inerstor-phone {
+    flex: 1;
+    font-size: 13px;
+}
+
+.iconfont.icon-youjiantou {
+    position: absolute;
+    right: 0;
+    top: 38%;
+}
+
+.weui-cells p, .weui-cells span {
+    font-size: 14px;
+}
+
+.weui-cells span {
+    display: inline-block;
+    height: 30px;
+    width:60px;
+    text-align: center;
+    line-height:30px;
+    background: #eee;
+    border-radius: 4px;
+}
